@@ -7,7 +7,11 @@
     <!-- This is Squarespace. --><!-- nolan-demo -->
 <base href="">
 <meta charset="utf-8" />
+{% if title %}
+<title>Fox Interactive - {{ title }}</title>
+{% else %}
 <title>Fox Interactive</title>
+{% endif %}
 <link rel="shortcut icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
 <link rel="canonical" href="https://nolan-demo.squarespace.com"/>
 <meta property="og:site_name" content="Nolan &amp; Co"/>
@@ -114,10 +118,11 @@
                 <div class="header-nav-wrapper">
                   <nav class="header-nav-list">
 
-    <div class="header-nav-item header-nav-item--collection">
-      <a href="{% url 'app:aboutus' %}" data-animation-role="header-element">
-       About Us
-      </a>
+    <div class="header-nav-item header-nav-item--collection"> 
+        <a href="{% url 'app:aboutus' %}" data-animation-role="header-element">
+        <span class="visually-hidden">Current Page:</span>
+        About Us
+        </a>
     </div>
  
     <div class="header-nav-item header-nav-item--collection">
@@ -197,7 +202,6 @@
         Our Services
       </a>
     </div>
-  
   </div>
 </div>
 
@@ -212,37 +216,6 @@
       <main id="page" class="container" role="main">
         
           <article class="sections" data-page-sections="5d44502fb57a0b0001e45d2c" id="sections">
-    <section
-  class='page-section
-      layout-engine-section
-    background-width--full-bleed'
-  data-section-id="5d44503a8e81de0001db7996"
-  
-  data-controller="SectionWrapperController, MagicPaddingController"
-  data-current-styles="{
-  &quot;imageOverlayOpacity&quot; : 0.15,
-  &quot;video&quot; : {
-    &quot;playbackSpeed&quot; : 0.5,
-    &quot;filter&quot; : 1,
-    &quot;filterStrength&quot; : 0,
-    &quot;zoom&quot; : 0
-  },
-  &quot;backgroundWidth&quot; : &quot;background-width--full-bleed&quot;,
-  &quot;sectionHeight&quot; : &quot;section-height--medium&quot;,
-  &quot;customSectionHeight&quot; : 85,
-  &quot;horizontalAlignment&quot; : &quot;horizontal-alignment--center&quot;,
-  &quot;verticalAlignment&quot; : &quot;vertical-alignment--bottom&quot;,
-  &quot;contentWidth&quot; : &quot;content-width--medium&quot;,
-  &quot;sectionAnimation&quot; : &quot;none&quot;,
-  &quot;backgroundMode&quot; : &quot;image&quot;
-}"
-  data-animation="none">
-  <div class="section-background">
-  </div>
-
-<div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d44503a8e81de0001db7996"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-55c2a21136f2e6d37292"><div class="sqs-block-content"><h2 style="text-align:center;white-space:pre-wrap;">SOCIAL MEDIA THAT MATTERS</h2></div></div></div></div></div>
-</section>
-
     <section
   class='page-section
     
@@ -286,6 +259,7 @@
 
   <div class="content-wrapper">
     <div class="content">
+    <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d44503a8e81de0001db7996"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-55c2a21136f2e6d37292"><div class="sqs-block-content"><h2 style="white-space:pre-wrap;">SOCIAL MEDIA THAT MATTERS</h2></div></div></div></div></div>
       <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d44503a8e81de0001db7996"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-55c2a21136f2e6d37292"><div class="sqs-block-content"><h3 style="white-space:pre-wrap;">“People have become relatively immune to messages targeted at them. The way to reach your customers is to create an experience within them.”</h3></div><p style="white-space:pre-wrap;">-James Gilmore & Joe Pine</p></div></div></div></div>
     </div>
   </div>
@@ -298,9 +272,7 @@
     
     background-width--full-bleed
     
-      section-height--medium
-    
-    
+      section-height--small
       content-width--wide
     
     horizontal-alignment--center
@@ -334,7 +306,7 @@
     class="content-wrapper"
     style=''>
     <div class="content">
-      
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d44503a8e81de0001db7996"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-55c2a21136f2e6d37292"><div class="sqs-block-content"><h2 style="text-align:right;white-space:pre-wrap;">Create.Inspire.Repeat</h2></div></div></div></div></div>
       <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d445052b4f26a0001b49901"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-a8bd5daafd3df12ee4be"><div class="sqs-block-content">
 
       <div class="image-block-outer-wrapper layout-caption-below design-layout-inline combination-animation-slide-up individual-animation-none individual-text-animation-none">
@@ -342,7 +314,7 @@
         <div class="intrinsic" style="max-width:2366.0px;">
           
             <div style="padding-bottom:56.255279541015625%;" class="image-block-wrapper   has-aspect-ratio" data-animation-role="image" data-description="" >
-              <noscript><img src="https://images.squarespace-cdn.com/content/v1/5d435de878554d0001216799/1566222111263-EZUKJHS8S2N27VPC5QTU/ke17ZwdGBToddI8pDm48kKceyMo6PPoiHgwJGxgZ4WR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1URE15jFnb94evAedSHqlCl85-Yqax2ZLuKwBXUjHrgu-1ay_bVLekQexMdKesgta6w/20170613S1_About-Page_Studio-white-board_024_V2.jpg" alt="20170613S1_About-Page_Studio-white-board_024_V2.jpg" /></noscript><img class="thumb-image" data-component-key="idv1.i.5d5aa71db451b50001381f9a" data-src="https://images.squarespace-cdn.com/content/v1/5d435de878554d0001216799/1566222111263-EZUKJHS8S2N27VPC5QTU/ke17ZwdGBToddI8pDm48kKceyMo6PPoiHgwJGxgZ4WR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1URE15jFnb94evAedSHqlCl85-Yqax2ZLuKwBXUjHrgu-1ay_bVLekQexMdKesgta6w/20170613S1_About-Page_Studio-white-board_024_V2.jpg" data-image="https://images.squarespace-cdn.com/content/v1/5d435de878554d0001216799/1566222111263-EZUKJHS8S2N27VPC5QTU/ke17ZwdGBToddI8pDm48kKceyMo6PPoiHgwJGxgZ4WR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1URE15jFnb94evAedSHqlCl85-Yqax2ZLuKwBXUjHrgu-1ay_bVLekQexMdKesgta6w/20170613S1_About-Page_Studio-white-board_024_V2.jpg" data-image-dimensions="2366x1331" data-image-focal-point="0.5,0.5" alt="20170613S1_About-Page_Studio-white-board_024_V2.jpg" data-load="false" data-image-id="5d5aa71db451b50001381f9a" data-type="image" />
+              <noscript><img src="https://cdn.pixabay.com/photo/2017/07/18/09/43/icon-2515316_960_720.png" alt="20170613S1_About-Page_Studio-white-board_024_V2.jpg" /></noscript><img class="thumb-image" data-component-key="idv1.i.5d5aa71db451b50001381f9a" data-src="https://cdn.pixabay.com/photo/2017/07/18/09/43/icon-2515316_960_720.png" alt="20170613S1_About-Page_Studio-white-board_024_V2.jpg" data-image="https://cdn.pixabay.com/photo/2017/07/18/09/43/icon-2515316_960_720.png" alt="20170613S1_About-Page_Studio-white-board_024_V2.jpg" data-image-dimensions="2366x1331" data-image-focal-point="0.5,0.5" alt="20170613S1_About-Page_Studio-white-board_024_V2.jpg" data-load="false" data-image-id="5d5aa71db451b50001381f9a" data-type="image" />
             </div>
         </div>
       
@@ -356,7 +328,6 @@
   </div>
 </section>
 
-  
     <section
   class='page-section
     
@@ -679,7 +650,7 @@
     
     background-width--full-bleed
     
-      section-height--medium
+      section-height--small
     
     
       content-width--medium
@@ -714,26 +685,23 @@
   </div>
   <div class="content-wrapper">
     <div class="content">
-      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d445b4a32542a0001d9c4a2"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-f6cbb14267fcecad6ca9"><div class="sqs-block-content"><h2 style="text-align:center;white-space:pre-wrap;">CHANNELS WE WORK WITH</h2></div></div><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_1_1564760864373_24536"><div class="sqs-block-content">&nbsp;</div></div><div class="row sqs-row"><div class="col sqs-col-4 span-4"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1564760864373_15400"><div class="sqs-block-content">
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5d445b4a32542a0001d9c4a2"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-f6cbb14267fcecad6ca9"><div class="sqs-block-content"><h3 style="text-align:center;white-space:pre-wrap;">CHANNELS WE WORK WITH</h3></div></div><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_1_1564760864373_24536"><div class="sqs-block-content">&nbsp;</div></div><div class="row sqs-row"><div class="col sqs-col-4 span-4"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1564760864373_15400"><div class="sqs-block-content">
+      </div></div></div><div class="col sqs-col-8 span-8"><div class="row sqs-row"><div class="col sqs-col-4 span-4"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1564760864373_18399"><div class="sqs-block-content">
       <div id="footer">
         <div class="social-popout">
           <div class="columns" style="text-align:center">
-            <a><i class="fa fa-instagram" style="font-size:48px;color:white"></i></a>
-            <a><i class="fa fa-facebook-square" style="font-size:48px; color:white"></i><a>
-            <a><i class="fa fa-twitter" style="font-size:48px;color:white"></i></a>
-            <a><i class="fa fa-linkedin" style="font-size:48px;color:white"></i></a>
-            <a><i class="fa fa-pinterest" style="font-size:48px;color:white"></i></a>
-            <a><i class="fa fa-quora" style="font-size:48px;color:white"></i></a>
+            <a><i class="fa fa-instagram" style="font-size:38px;color:white"></i><a>
+            <a><i class="fa fa-facebook-square" style="font-size:38px; color:white"></i><a>
+            <a><i class="fa fa-twitter" style="font-size:38px;color:white"></i></a>
+            <a><i class="fa fa-linkedin" style="font-size:38px;color:white"></i></a>
+            <a><i class="fa fa-pinterest" style="font-size:38px;color:white"></i></a>
+            <a><i class="fa fa-quora" style="font-size:38px;color:white"></i></a>
           </div>
         </div>
       </div>
-</div></div></div><div class="col sqs-col-8 span-8"><div class="row sqs-row"><div class="col sqs-col-4 span-4"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1564760864373_18399"><div class="sqs-block-content">
-
     </div>
   </div>
 </section>
-
-  
 </article>
 
       </main>
